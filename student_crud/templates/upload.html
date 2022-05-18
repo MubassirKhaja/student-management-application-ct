@@ -1,0 +1,12 @@
+<html>
+{% include "base.html" %}
+
+<center><h1> {{title}}</h1></center>
+<form method = "post" enctype= "multipart/form-data">
+    {% csrf_token %}
+    <input type = "file" name = "document">
+    <button type="submit">Upload file </button>
+</form>
+
+
+</html>

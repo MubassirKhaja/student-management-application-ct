@@ -1,0 +1,31 @@
+<html>
+{% include "base.html" %}
+
+<center><h1> {{title}}</h1></center>
+<table>
+    <thead>
+        <tr>
+            <td>Region ID</td>
+            <td>School Name</td>
+            <td>Email</td>
+            <td>Principal</td>
+            <td>Phone</td>
+            <td>Address</td>
+
+        </tr>
+    </thead>
+    {% for k in queryset %}
+    <tbody>
+        <tr>
+            <td>{{k.REGIONID}}</td>
+            <td>{{k.school}}</td>
+            <td>{{k.email}}</td>
+            <td>{{k.principal}}</td>
+            <td>{{k.phone}}</td>
+            <td>{{k.address2}}</td>
+        </tr>
+    </tbody>
+    {% endfor %}
+</table>
+
+</html>

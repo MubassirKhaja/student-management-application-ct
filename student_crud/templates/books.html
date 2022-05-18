@@ -1,0 +1,26 @@
+<html>
+{% include "base.html" %}
+
+<center><h1> {{title}}</h1></center>
+<table>
+    <thead>
+        <tr>
+            <td>Title</td>
+            <td>Author Name</td>
+            <td>Date of Publication</td>
+            <td>Number of Pages</td>
+        </tr>
+    </thead>
+    {% for k in queryset %}
+    <tbody>
+        <tr>
+            <td>{{k.Title}}</td>
+            <td>{{k.Author_Name}}</td>
+            <td>{{k.Date_of_Publication}}</td>
+            <td>{{k.Number_of_Pages}}</td>
+        </tr>
+    </tbody>
+    {% endfor %}
+</table>
+
+</html>
